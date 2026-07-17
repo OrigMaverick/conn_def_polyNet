@@ -5,13 +5,24 @@ This project investigates how local connectivity defects affect building block m
 
 SFB1552
 
-## Workflow & Directory Structure
+## Detailed Workflow & Code Description
 
-The project code is organized sequentially to match the simulation pipeline:
+### 1. Network Generation (`src/01_generation/`)
+- `generate_heteroleptic.py` & `generate_homoleptic.py`: These scripts define the topology of your star polymer networks. 
+  - **Key Variables:** Core functionality ($f$), arm length ($N_{\text{arm}}$), and defect fraction ($p_{\text{defect}}$).
+  - **What the code does:** It algorithmically places coordinates for star polymer cores and linear arm monomers in a periodic simulation box, intentionally leaving a percentage of functional groups unconnected to simulate local connectivity defects. It writes the topology out as an initial `.gsd` file.
 
-- `src/01_generation/`: Contains two files `generate_heteroleptic.py` and `generate_homoleptic.py` to build the initial network configurations for the two systems (`init_file.gsd`).
-- `src/02_simulation/`: Contains `run_sim.py` to run MD simulations in HOOMD-blue and output trajectories (`raw_data.gsd`).
-- `src/03_analysis/`: Contains `analyze.py` to calculate network properties (MSD, $R_{\text{g}}$, diffusion $D$, bond dissociation $c(t)$, Rouse modes, etc.) and generate plots.
+### 2. Molecular Dynamics Simulation (`src/02_simulation/`)
+- `run_sim.py`: Controls the HOOMD-blue simulation pipeline.
+  - **Key Variables:** Time-step ($\Delta t$), total integration steps, temperature ($T$), and friction coefficient ($\gamma$).
+  - **What the code does:** It initializes the system from the generated `.gsd` file, applies a Weeks-Chandler-Andersen (WCA) potential for excluded volume interactions, sets up a Langevin thermostat for NVT dynamics, runs an energy minimization, and then executes production runs to output trajectory frames.
+
+### 3. Data Analysis (`src/03_analysis/`)
+- `analyze.py`: Processes the raw trajectory data.
+  - **What the code does:** It loops through the trajectory file (`raw_data.gsd`) to calculate:
+    - Mean Squared Displacement (MSD) to determine building block mobility.
+    - Diffusion coefficient ($D$) via the Einstein relation.
+    - Bond dissociation correlation function $c(t)$ to monitor the lifetime of the supramolecular links.
 
 ## Setup & Installation
 
