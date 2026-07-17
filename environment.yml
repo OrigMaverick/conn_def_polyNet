@@ -1,0 +1,11 @@
+name: polymer-networks
+channels:
+  - conda-forge
+  - default
+dependencies:
+  - python=3.10
+  - hoomd
+  - gsd
+  - numpy
+  - matplotlib
+  - scipy
