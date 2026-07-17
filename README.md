@@ -5,9 +5,9 @@ This project investigates how local connectivity defects affect building block m
 
 The project code is organized sequentially to match the simulation pipeline:
 
-- `src/01_generation/`: Contains `generate.py` to build the initial network configurations (`init_file.gsd`).
+- `src/01_generation/`: Contains two files `generate_heteroleptic.py` and `generate_homoleptic.py` to build the initial network configurations for the two systems (`init_file.gsd`).
 - `src/02_simulation/`: Contains `run_sim.py` to run MD simulations in HOOMD-blue and output trajectories (`raw_data.gsd`).
-- `src/03_analysis/`: Contains `analyze.py` to calculate network properties (MSD, $R_g$, diffusion $D$, bond dissociation $c(t)$, Rouse modes, etc.) and generate plots.
+- `src/03_analysis/`: Contains `analyze.py` to calculate network properties (MSD, $R_{\text{g}}$, diffusion $D$, bond dissociation $c(t)$, Rouse modes, etc.) and generate plots.
 
 ## Setup & Installation
 
