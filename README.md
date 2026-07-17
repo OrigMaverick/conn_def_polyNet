@@ -43,3 +43,13 @@ If you use this code or find our work helpful, please cite our paper:
   doi     = {10.1021/acs.macromol.5c02272}
 }
 ```
+
+## Funding & Acknowledgments
+
+This work is part of the Collaborative Research Center **SFB 1552: Defects and Defect Control in Soft Matter**, funded by the German Research Foundation (DFG).
+
+* **Project ID:** German Research Foundation (DFG) - Project number: 465145163
+* **Speaker:** Professor Dr.-Ing. Sebastian Seiffert (Johannes Gutenberg University Mainz)
+* **Funding Period:** Since 2023
+
+For more information about the overall initiative and its sub-projects, visit the [SFB 1552 Project Page](https://gepris.dfg.de/gepris/projekt/465145163).
