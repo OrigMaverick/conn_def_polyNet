@@ -16,7 +16,7 @@ To install the required dependencies (HOOMD-blue, GSD, NumPy, SciPy, Matplotlib)
 ```bash
 conda env create -f environment.yml
 conda activate polymer-networks
-
+```
 ## Publication
 
 If you use this code or find our work helpful, please cite our paper:
@@ -38,3 +38,4 @@ If you use this code or find our work helpful, please cite our paper:
   year    = {2026},
   doi     = {10.1021/acs.macromol.5c02272}
 }
+```
