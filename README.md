@@ -16,3 +16,24 @@ To install the required dependencies (HOOMD-blue, GSD, NumPy, SciPy, Matplotlib)
 ```bash
 conda env create -f environment.yml
 conda activate polymer-networks
+
+
+If you use this code or find our work helpful, please cite our paper:
+
+* **Title:** Effects of Connectivity Defects on the Structure and Dynamics of Star Polymer Networks
+* **Authors:** Sayam Bandyopadhyay, Sebastian Seiffert, and Arash Nikoubashman
+* **Journal:** *Macromolecules*, 2026, 59 (3), 1191–1200
+* **DOI:** [10.1021/acs.macromol.5c02272](https://doi.org/10.1021/acs.macromol.5c02272)
+
+### BibTeX
+```bibtex
+@article{doi:10.1021/acs.macromol.5c02272,
+  author  = {Bandyopadhyay, Sayam and Seiffert, Sebastian and Nikoubashman, Arash},
+  title   = {Effects of Connectivity Defects on the Structure and Dynamics of Star Polymer Networks},
+  journal = {Macromolecules},
+  volume  = {59},
+  number  = {3},
+  pages   = {1191-1200},
+  year    = {2026},
+  doi     = {10.1021/acs.macromol.5c02272}
+}
